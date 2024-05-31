@@ -130,10 +130,10 @@
         base {
             label = "base";
             bindings = <
-        &kp Q        &kp W        &kp F         &kp P         &kp B                   &kp J        &kp L         &kp U         &kp Y          &kp SEMI
-        &bhm LGUI A  &bhm LALT R  &bhm LSHFT S  &bhm LCTRL T  &kp G                   &kp M        &bhm RCTRL N  &bhm RSHFT E  &bhm LALT I    &bhm RGUI O
-		&kp Z        &bhm RALT X  &kp C         &kp D         &kp V        &C_MUTE    &kp K        &kp H         &kp COMMA     &bhm RALT DOT  &kp FSLH
-                                                &none         &lt 1 RET               &lt 2 SPACE  &none
+        &kp Q        &kp W        &kp F         &kp P         &kp B                      &kp J        &kp L         &kp U         &kp Y          &kp SEMI
+        &bhm LGUI A  &bhm LALT R  &bhm LSHFT S  &bhm LCTRL T  &kp G                      &kp M        &bhm RCTRL N  &bhm RSHFT E  &bhm LALT I    &bhm RGUI O
+		&kp Z        &bhm RALT X  &kp C         &kp D         &kp V        &kp C_MUTE    &kp K        &kp H         &kp COMMA     &bhm RALT DOT  &kp FSLH
+                                                &none         &lt 1 RET                  &lt 2 SPACE  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
