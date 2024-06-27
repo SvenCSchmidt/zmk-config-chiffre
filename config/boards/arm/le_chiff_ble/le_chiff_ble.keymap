@@ -20,13 +20,24 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-        hms: homerow_mod_shift {
+        hmls: homerow_mod_lshift {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;// <---[[moderate duration]]
+            tapping-term-ms = <120>;// <---[[moderate duration]]
             quick-tap-ms = <0>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30>;
+            bindings = <&kp>, <&kp>;
+        };
+        hmrs: homerow_mod_rshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <120>;// <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24>;
             bindings = <&kp>, <&kp>;
         };
         hmg: homerow_mod_gui {
@@ -202,10 +213,10 @@
         base {
             label = "base";
             bindings = <
-        &kp Q  &kp W         &kp F         &kp P         &kp B                      &kp J        &kp L         &kp U         &kp Y           &kp SEMI
-        &kp A  &hmla LALT R  &hms LSHFT S  &bhm LCTRL T  &kp G                      &kp M        &bhm RCTRL N  &hms RSHFT E  &hmla LALT I    &kp O
-		&kp Z  &hmra RALT X  &kp C         &kp D         &kp V        &kp C_MUTE    &kp K        &kp H         &kp COMMA     &hmra RALT DOT  &kp FSLH
-                                           &none         &lt 1 RET                  &lt 2 SPACE  &none
+        &kp Q  &kp W         &kp F          &kp P         &kp B                      &kp J        &kp L         &kp U          &kp Y           &kp SEMI
+        &kp A  &hmla LALT R  &hmls LSHFT S  &bhm LCTRL T  &kp G                      &kp M        &bhm RCTRL N  &hmrs RSHFT E  &hmla LALT I    &kp O
+		&kp Z  &hmra RALT X  &kp C          &kp D         &kp V        &kp C_MUTE    &kp K        &kp H         &kp COMMA      &hmra RALT DOT  &kp FSLH
+                                            &none         &lt 1 RET                  &lt 2 SPACE  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
@@ -224,10 +235,10 @@
         num {
             label = "num";
             bindings = <
-        &kp RS(N1)  &kp RS(N2)      &kp RS(N3)     &kp RS(N4)     &kp RS(N5)             &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)      &kp LS(N0)
-        &kp N1      &hmla LALT N2   &hms LSHFT N3  &bhm LCTRL N4  &kp N5                 &kp N6      &bhm LCTRL N7  &hms RSHFT N8  &hmla LALT N9   &kp N0
-		&kp MINUS   &hmra RALT SQT  &kp EQUAL      &kp LPAR       &kp LBKT      &none    &kp RBKT    &kp RPAR       &kp COMMA      &hmra RALT DOT  &kp BSLH
-                                                   &none          &tog 4                 &none       &none
+        &kp RS(N1)  &kp RS(N2)      &kp RS(N3)      &kp RS(N4)     &kp RS(N5)             &kp LS(N6)  &kp LS(N7)     &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
+        &kp N1      &hmla LALT N2   &hmls LSHFT N3  &bhm LCTRL N4  &kp N5                 &kp N6      &bhm LCTRL N7  &hmrs RSHFT N8  &hmla LALT N9   &kp N0
+		&kp MINUS   &hmra RALT SQT  &kp EQUAL       &kp LPAR       &kp LBKT      &none    &kp RBKT    &kp RPAR       &kp COMMA       &hmra RALT DOT  &kp BSLH
+                                                    &none          &tog 4                 &none       &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
