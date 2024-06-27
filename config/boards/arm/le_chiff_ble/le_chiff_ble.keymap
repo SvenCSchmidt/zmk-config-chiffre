@@ -182,7 +182,7 @@
 
         Cmb_RGUI {
             bindings = <&kp RGUI>;
-            key-positions = <19 29>;
+            key-positions = <19 30>;
             layers = <0 2>;
         };
     };
